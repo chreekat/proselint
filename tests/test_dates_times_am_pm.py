@@ -29,6 +29,8 @@ class TestCheck(Check):
             "It happened at 7 a.m.") == []
         assert chk.check_lowercase_periods(
             "It happened at 7 am.") != []
+        assert chk.check_lowercase_periods(
+            "On Wed, Sep 21, 2016 at 11:42 AM -0400, X wrote:") == []
 
     def test_smoke_check_spacing(self):
         """Basic smoke test.
